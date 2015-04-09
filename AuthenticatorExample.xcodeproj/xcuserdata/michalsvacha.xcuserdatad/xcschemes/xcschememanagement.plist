@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Authenticator.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>AuthenticatorExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>E04157C41ABADBE00094EE84</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E04157D91ABADC010094EE84</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E04157E31ABADC010094EE84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
