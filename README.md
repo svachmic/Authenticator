@@ -64,6 +64,12 @@ Authenticator.deletePIN({ () -> Void in
 
 - iOS 7 support (UIAlertController vs UIAlertDialog)
 
+* * *
+
+## Contact
+
+- [Michal Švácha](http://github.com/svachmic) ([@miguelitinho](https://twitter.com/miguelitinho))
+
 ## License
 
 Authenticator is released under the MIT license. See LICENSE for details.
