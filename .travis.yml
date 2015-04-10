@@ -1,5 +1,5 @@
 language: swift
  
 script:
-- xcodebuild build -scheme Authenticator -destination 'platform=iOS Simulator, name=iPhone 6,OS=8.0'
-- xcodebuild build -scheme AuthenticatorExample -destination 'platform=iOS Simulator, name=iPhone 6,OS=8.0'
+- xcodebuild build -scheme Authenticator -destination "platform=iOS Simulator, name=iPhone 6,OS=8.0"
+- xcodebuild build -scheme AuthenticatorExample -destination "platform=iOS Simulator, name=iPhone 6,OS=8.0"
