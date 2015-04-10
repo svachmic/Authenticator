@@ -1,4 +1,4 @@
-language: swift
+language: objective-c
  
 script:
 - xcodebuild build -scheme Authenticator -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6"
