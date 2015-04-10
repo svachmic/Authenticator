@@ -66,4 +66,4 @@ Authenticator.deletePIN({ () -> Void in
 
 ## License
 
-TBD
+Authenticator is released under the MIT license. See LICENSE for details.
