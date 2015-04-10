@@ -55,7 +55,6 @@ Delete PIN is not protected because it is an atomic function serving only to del
 ```swift
 Authenticator.deletePIN({ () -> Void in
 	// PIN has been successfully deleted
-println("Successfully deleted.")
 }, failureClosure: { (error) -> Void in
 	// An error has occurred
 })
