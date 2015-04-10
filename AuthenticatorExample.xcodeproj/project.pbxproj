@@ -12,7 +12,6 @@
 		E04157BB1ABADBE00094EE84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04157B91ABADBE00094EE84 /* Main.storyboard */; };
 		E04157BD1ABADBE00094EE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04157BC1ABADBE00094EE84 /* Images.xcassets */; };
 		E04157C01ABADBE00094EE84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04157BE1ABADBE00094EE84 /* LaunchScreen.xib */; };
-		E04157CC1ABADBE00094EE84 /* AuthenticatorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04157CB1ABADBE00094EE84 /* AuthenticatorExampleTests.swift */; };
 		E04157DF1ABADC010094EE84 /* Authenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = E04157DE1ABADC010094EE84 /* Authenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E04157E51ABADC010094EE84 /* Authenticator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04157DA1ABADC010094EE84 /* Authenticator.framework */; };
 		E04157EE1ABADC010094EE84 /* AuthenticatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04157ED1ABADC010094EE84 /* AuthenticatorTests.swift */; };
@@ -25,13 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E04157C61ABADBE00094EE84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E04157A81ABADBE00094EE84 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E04157AF1ABADBE00094EE84;
-			remoteInfo = AuthenticatorExample;
-		};
 		E04157E61ABADC010094EE84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E04157A81ABADBE00094EE84 /* Project object */;
@@ -77,9 +69,6 @@
 		E04157BA1ABADBE00094EE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E04157BC1ABADBE00094EE84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E04157BF1ABADBE00094EE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E04157C51ABADBE00094EE84 /* AuthenticatorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticatorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E04157CA1ABADBE00094EE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E04157CB1ABADBE00094EE84 /* AuthenticatorExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorExampleTests.swift; sourceTree = "<group>"; };
 		E04157DA1ABADC010094EE84 /* Authenticator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Authenticator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04157DD1ABADC010094EE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04157DE1ABADC010094EE84 /* Authenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authenticator.h; sourceTree = "<group>"; };
@@ -96,13 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E04157F11ABADC010094EE84 /* Authenticator.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E04157C21ABADBE00094EE84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				E04157B21ABADBE00094EE84 /* AuthenticatorExample */,
-				E04157C81ABADBE00094EE84 /* AuthenticatorExampleTests */,
 				E04157DB1ABADC010094EE84 /* Authenticator */,
 				E04157EA1ABADC010094EE84 /* AuthenticatorTests */,
 				E04157B11ABADBE00094EE84 /* Products */,
@@ -139,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				E04157B01ABADBE00094EE84 /* AuthenticatorExample.app */,
-				E04157C51ABADBE00094EE84 /* AuthenticatorExampleTests.xctest */,
 				E04157DA1ABADC010094EE84 /* Authenticator.framework */,
 				E04157E41ABADC010094EE84 /* AuthenticatorTests.xctest */,
 			);
@@ -163,23 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				E04157B41ABADBE00094EE84 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E04157C81ABADBE00094EE84 /* AuthenticatorExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				E04157CB1ABADBE00094EE84 /* AuthenticatorExampleTests.swift */,
-				E04157C91ABADBE00094EE84 /* Supporting Files */,
-			);
-			path = AuthenticatorExampleTests;
-			sourceTree = "<group>";
-		};
-		E04157C91ABADBE00094EE84 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E04157CA1ABADBE00094EE84 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,24 +216,6 @@
 			productReference = E04157B01ABADBE00094EE84 /* AuthenticatorExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E04157C41ABADBE00094EE84 /* AuthenticatorExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E04157D21ABADBE00094EE84 /* Build configuration list for PBXNativeTarget "AuthenticatorExampleTests" */;
-			buildPhases = (
-				E04157C11ABADBE00094EE84 /* Sources */,
-				E04157C21ABADBE00094EE84 /* Frameworks */,
-				E04157C31ABADBE00094EE84 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E04157C71ABADBE00094EE84 /* PBXTargetDependency */,
-			);
-			name = AuthenticatorExampleTests;
-			productName = AuthenticatorExampleTests;
-			productReference = E04157C51ABADBE00094EE84 /* AuthenticatorExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		E04157D91ABADC010094EE84 /* Authenticator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E04157F31ABADC010094EE84 /* Build configuration list for PBXNativeTarget "Authenticator" */;
@@ -320,10 +265,6 @@
 					E04157AF1ABADBE00094EE84 = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					E04157C41ABADBE00094EE84 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = E04157AF1ABADBE00094EE84;
-					};
 					E04157D91ABADC010094EE84 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -347,7 +288,6 @@
 			projectRoot = "";
 			targets = (
 				E04157AF1ABADBE00094EE84 /* AuthenticatorExample */,
-				E04157C41ABADBE00094EE84 /* AuthenticatorExampleTests */,
 				E04157D91ABADC010094EE84 /* Authenticator */,
 				E04157E31ABADC010094EE84 /* AuthenticatorTests */,
 			);
@@ -362,13 +302,6 @@
 				E04157BB1ABADBE00094EE84 /* Main.storyboard in Resources */,
 				E04157C01ABADBE00094EE84 /* LaunchScreen.xib in Resources */,
 				E04157BD1ABADBE00094EE84 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E04157C31ABADBE00094EE84 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,14 +333,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E04157C11ABADBE00094EE84 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E04157CC1ABADBE00094EE84 /* AuthenticatorExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E04157D51ABADC010094EE84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,11 +353,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E04157C71ABADBE00094EE84 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E04157AF1ABADBE00094EE84 /* AuthenticatorExample */;
-			targetProxy = E04157C61ABADBE00094EE84 /* PBXContainerItemProxy */;
-		};
 		E04157E71ABADC010094EE84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E04157D91ABADC010094EE84 /* Authenticator */;
@@ -569,40 +489,6 @@
 			};
 			name = Release;
 		};
-		E04157D31ABADBE00094EE84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AuthenticatorExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AuthenticatorExample.app/AuthenticatorExample";
-			};
-			name = Debug;
-		};
-		E04157D41ABADBE00094EE84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AuthenticatorExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AuthenticatorExample.app/AuthenticatorExample";
-			};
-			name = Release;
-		};
 		E04157F41ABADC010094EE84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -695,15 +581,6 @@
 			buildConfigurations = (
 				E04157D01ABADBE00094EE84 /* Debug */,
 				E04157D11ABADBE00094EE84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E04157D21ABADBE00094EE84 /* Build configuration list for PBXNativeTarget "AuthenticatorExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E04157D31ABADBE00094EE84 /* Debug */,
-				E04157D41ABADBE00094EE84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
