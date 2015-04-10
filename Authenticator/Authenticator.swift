@@ -171,6 +171,20 @@ class Authenticator {
     }
     
     /**
+    Deletes the PIN.
+    
+    :param: completionClosure Closure performed if everything has gone well.
+    :param: failureClosure Closure performed if an error has occurred.
+    */
+    class func deletePIN(completionClosure: () -> Void, failureClosure: (error: NSError) -> Void) {
+        if let error = AuthenticatorKeychain.deletePIN() {
+            failureClosure(error: error)
+        } else {
+            completionClosure()
+        }
+    }
+    
+    /**
     Shows alert dialog for entering the PIN to authenticate. Handles invalid PIN and empty values by showing the alert dialog again with modified message saying what went wrong. Attempt limit is set to 3 - after that failureClosure is called.
     
     :param: contextController Controller which will modally present the alert view dialog.

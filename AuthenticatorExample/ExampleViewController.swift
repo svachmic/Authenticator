@@ -43,11 +43,11 @@ class ExampleViewController: UIViewController {
     }
     
     @IBAction func deletePINButtonPressed(sender: AnyObject) {
-        if let error = AuthenticatorKeychain.deletePIN() {
-            println(error.localizedDescription)
-        } else {
+        Authenticator.deletePIN({ () -> Void in
             println("Successfully deleted.")
-        }
+        }, failureClosure: { (error) -> Void in
+            println(error.localizedDescription)
+        })
     }
 }
 

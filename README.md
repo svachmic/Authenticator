@@ -19,58 +19,46 @@ All the strings used are wrapped with `NSLocalizedString()`, so to localize to d
 
 ```swift
 Authenticator.setUpPIN(self.navigationController!, completionClosure: { () -> Void in
-	
 	// PIN is set up
-
 }, failureClosure: { (error) -> Void in
-	
 	// An error has occurred
-
 })
 ```
 
 ### Authenticate
 
-If `Authenticate` method is called without previously setting up pin, setup dialog is shown instead. After PIN is set up, method behaves as though user has been authenticated.
+If `Authenticate` method is called without previously setting up PIN, setup dialog is shown instead. After PIN is set up, method behaves as though user has been authenticated.
 
 ```swift
 Authenticator.authenticateUser(self.navigationController!, completionClosure: { () -> Void in
-	
 	// The user is authenticated
-
 }, failureClosure: { (error) -> Void in
-	
 	// Failed to authenticate the user
-
 })
 ```
 
 ### Reset PIN
+If `resetPIN` method is called withou previously setting up PIN, setup dialog is shown instead.
 
 ```swift
 Authenticator.resetPIN(self.navigationController!, completionClosure: { () -> Void in
-	
 	// PIN has been successfully reset
-
 }, failureClosure: { (error) -> Void in
-	
 	// An error has occurred
-
 })
 ```
 
 ### Delete PIN
 
+Delete PIN is not protected because it is an atomic function serving only to delete the stored PIN in the keychain. To protect it, simply wrap `Authenticate` around it.
+
 ```swift
-if let error = AuthenticatorKeychain.deletePIN() {
-	
-	// An error has occurred
-
-} else {
-	
+Authenticator.deletePIN({ () -> Void in
 	// PIN has been successfully deleted
-
-}
+println("Successfully deleted.")
+}, failureClosure: { (error) -> Void in
+	// An error has occurred
+})
 ```
 
 ## TODO
