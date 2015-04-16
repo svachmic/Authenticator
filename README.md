@@ -27,7 +27,7 @@ Authenticator.setUpPIN(self.navigationController!, completionClosure: { () -> Vo
 
 ### Authenticate
 
-If `Authenticate` method is called without previously setting up PIN, setup dialog is shown instead. After PIN is set up, method behaves as though user has been authenticated.
+If `authenticateUser` method is called without previously setting up PIN, setup dialog is shown instead. After PIN is set up, method behaves as though user has been authenticated.
 
 ```swift
 Authenticator.authenticateUser(self.navigationController!, completionClosure: { () -> Void in
@@ -50,7 +50,7 @@ Authenticator.resetPIN(self.navigationController!, completionClosure: { () -> Vo
 
 ### Delete PIN
 
-Delete PIN is not protected because it is an atomic function serving only to delete the stored PIN in the keychain. To protect it, simply wrap `Authenticate` around it.
+Delete PIN is not protected because it is an atomic function serving only to delete the stored PIN in the keychain. To protect it, simply wrap `authenticateUser` around it.
 
 ```swift
 Authenticator.deletePIN({ () -> Void in
