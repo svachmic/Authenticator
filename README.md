@@ -1,6 +1,7 @@
 # Authenticator
 
 [![Build Status](https://travis-ci.org/svachmic/Authenticator.svg?branch=master)](https://travis-ci.org/svachmic/Authenticator)
+[![Twitter: @Miguelitinho](https://img.shields.io/badge/contact-%40Miguelitinho-blue.svg?style=flat)](https://twitter.com/Miguelitinho)
 
 A ready to use implementation of user authentication using either PIN or TouchID. Comes with Keychain wrapper to securely store PIN.
 
