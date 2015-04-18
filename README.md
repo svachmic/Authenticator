@@ -21,7 +21,7 @@ All the strings used are wrapped with `NSLocalizedString()`, so to localize to d
 
 ```swift
 Authenticator.setUpPIN(self.navigationController!, completionClosure: { () -> Void in
-	// PIN is set up
+	// PIN has been set up
 }, failureClosure: { (error) -> Void in
 	// An error has occurred
 })
@@ -33,7 +33,7 @@ If `authenticateUser` method is called without previously setting up PIN, setup 
 
 ```swift
 Authenticator.authenticateUser(self.navigationController!, completionClosure: { () -> Void in
-	// The user is authenticated
+	// The user has been authenticated
 }, failureClosure: { (error) -> Void in
 	// Failed to authenticate the user
 })
