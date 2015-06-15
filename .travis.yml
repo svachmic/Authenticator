@@ -1,4 +1,5 @@
 language: objective-c
+osx_image: beta-xcode6.3
  
 script:
 - xcodebuild build -scheme Authenticator -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6"
