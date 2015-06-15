@@ -46,8 +46,8 @@ class Authenticator {
             }))
             
             alertController.addAction(UIAlertAction(title: ok, style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) -> Void in
-                let pinTextField = alertController.textFields![0] as UITextField
-                let pinCheckTextField = alertController.textFields![1] as UITextField
+                let pinTextField = alertController.textFields![0] as! UITextField
+                let pinCheckTextField = alertController.textFields![1] as! UITextField
                 let originalMessage = NSLocalizedString("Please enter your old and new PIN.", comment: "")
                 
                 if pinTextField.text == "" {
@@ -109,9 +109,9 @@ class Authenticator {
             }))
             
             alertController.addAction(UIAlertAction(title: ok, style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) -> Void in
-                let oldPinTextField = alertController.textFields![0] as UITextField
-                let pinTextField = alertController.textFields![1] as UITextField
-                let pinCheckTextField = alertController.textFields![2] as UITextField
+                let oldPinTextField = alertController.textFields![0] as! UITextField
+                let pinTextField = alertController.textFields![1] as! UITextField
+                let pinCheckTextField = alertController.textFields![2] as! UITextField
                 let originalMessage = NSLocalizedString("Please enter your old and new PIN.", comment: "")
                 
                 if oldPinTextField.text == AuthenticatorKeychain.loadPIN() {
@@ -208,7 +208,7 @@ class Authenticator {
                 
                 alertController.addAction(UIAlertAction(title: ok, style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) -> Void in
                     if let pincode = AuthenticatorKeychain.loadPIN() {
-                        let textFieldText = (alertController.textFields![0] as UITextField).text
+                        let textFieldText = (alertController.textFields![0] as! UITextField).text
                         if textFieldText == "" {
                             let originalMessage = NSLocalizedString("Please enter your PIN to proceed.", comment: "")
                             let errorMessage = NSLocalizedString("PIN cannot be empty!", comment: "")

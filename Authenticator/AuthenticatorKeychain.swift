@@ -27,11 +27,11 @@ class AuthenticatorKeychain {
     class func savePIN(pinToken: String) -> NSError? {
         var pinData: NSData = pinToken.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
         
-        let keychainQuery = [
-            kSecClass as String : kSecClassGenericPassword as String,
-            kSecAttrService as String : serviceIdentifier,
-            kSecAttrAccount : attributeAccount,
-            kSecValueData : pinData]
+        var keychainQuery = NSMutableDictionary()
+        keychainQuery.setObject(kSecClassGenericPassword as String, forKey: kSecClass as String)
+        keychainQuery.setObject(serviceIdentifier, forKey: kSecAttrService as String)
+        keychainQuery.setObject(attributeAccount, forKey: kSecAttrAccount as String)
+        keychainQuery.setObject(pinData, forKey: kSecValueData as String)
         
         let deleteStatusCode = SecItemDelete(keychainQuery as CFDictionaryRef)
         
@@ -50,10 +50,10 @@ class AuthenticatorKeychain {
     :returns: Either nil or NSError object (when error has occurred).
     */
     class func deletePIN() -> NSError? {
-        let keychainQuery = [
-            kSecClass as String : kSecClassGenericPassword as String,
-            kSecAttrService as String : serviceIdentifier,
-            kSecAttrAccount : attributeAccount]
+        let keychainQuery = NSMutableDictionary()
+        keychainQuery.setObject(kSecClassGenericPassword as String, forKey: kSecClass as String)
+        keychainQuery.setObject(serviceIdentifier, forKey: kSecAttrService as String)
+        keychainQuery.setObject(attributeAccount, forKey: kSecAttrAccount as String)
         
         // 0 means deleted successfully, -25300 means nothing found. Both are valid conditions.
         let deleteStatusCode = SecItemDelete(keychainQuery as CFDictionaryRef)
@@ -66,12 +66,13 @@ class AuthenticatorKeychain {
     :returns: Either the value as String or nil (when nothing has been found).
     */
     class func loadPIN() -> String? {
-        let keychainQuery = [
-            kSecClass as String : kSecClassGenericPassword as String,
-            kSecAttrService as String : serviceIdentifier as NSString,
-            kSecAttrAccount : attributeAccount,
-            kSecReturnData : kCFBooleanTrue,
-            kSecMatchLimit : kSecMatchLimitOne]
+        let keychainQuery = NSMutableDictionary()
+        keychainQuery.setObject(kSecClassGenericPassword as String, forKey: kSecClass as String)
+        keychainQuery.setObject(serviceIdentifier, forKey: kSecAttrService as String)
+        keychainQuery.setObject(attributeAccount, forKey: kSecAttrAccount as String)
+        keychainQuery.setObject(kCFBooleanTrue, forKey: kSecReturnData as String)
+        keychainQuery.setObject(kSecMatchLimitOne, forKey: kSecMatchLimit as String)
+        
         
         var dataTypeRef: Unmanaged<AnyObject>?
         let statusCode = SecItemCopyMatching(keychainQuery, &dataTypeRef)
@@ -79,7 +80,7 @@ class AuthenticatorKeychain {
         var pinToken: String?
         if let opaquePointer = dataTypeRef?.toOpaque() {
             let retrievedData = Unmanaged<NSData>.fromOpaque(opaquePointer).takeUnretainedValue()
-            pinToken = NSString(data: retrievedData, encoding: NSUTF8StringEncoding)
+            pinToken = NSString(data: retrievedData, encoding: NSUTF8StringEncoding) as? String
         }
         
         return pinToken
