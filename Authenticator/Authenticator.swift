@@ -10,7 +10,7 @@ import UIKit
 import LocalAuthentication
 
 /// Authenticator errors
-public let AuthenticatorErrorDomain = "ios.github.svachmic.authenticator.error"
+public let AuthenticatorErrorDomain = "io.github.svachmic.authenticator.error"
 
 class Authenticator {
     

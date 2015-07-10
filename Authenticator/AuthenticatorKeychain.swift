@@ -14,7 +14,7 @@ let serviceIdentifier = "AuthenticatorService"
 let attributeAccount = "AuthenticatorPIN"
 
 /**
-Class encapsulating all AUthenticator - Keychain communication. Provides API for CRUD operations.
+Class encapsulating all Authenticator - Keychain communication. Provides API for CRUD operations.
 */
 class AuthenticatorKeychain {
     
